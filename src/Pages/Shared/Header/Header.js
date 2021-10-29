@@ -47,7 +47,7 @@ const Header = () => {
                 Add New Food
               </NavLink>
               <NavLink
-                to="/manage"
+                to="/manageOrders"
                 className="text-decoration-none fw-normal mx-3 text-light"
               >
                 Manage All Orders
