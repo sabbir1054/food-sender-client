@@ -19,7 +19,7 @@ const Login = () => {
           <div className=" bg-dark text-center rounded  py-3 px-5 mt-5">
             <h3 className="logo text-warning display-2">Connect with us</h3>
             <p className="text-white">Food Sender</p>
-                    <button className="btn fw-normal btn-light"
+                    <button className="btn fw-normal btn-light mb-3"
                     onClick={handleLogin}>
               <img src="https://i.ibb.co/HPd5k52/pngwing-com.png" width='25' alt="" />{" "}
               Login with google

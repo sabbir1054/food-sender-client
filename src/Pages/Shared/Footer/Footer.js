@@ -29,35 +29,35 @@ const Footer = () => {
                   className="text-decoration-none fw-normal text-light"
                   target="blank"
                 >
-                  <i class="mx-4 fab fa-facebook fs-3"></i>
+                  <i className="mx-4 fab fa-facebook fs-3"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/md-sabbir-hossain-1054/"
                   target="blank"
                   className="text-decoration-none fw-normal text-light"
                 >
-                  <i class="mx-4 fab fa-linkedin fs-3"></i>
+                  <i className="mx-4 fab fa-linkedin fs-3"></i>
                 </a>
                 <a
                   href="https://www.instagram.com/_muhammad_sabbir_hossain/"
                   target="blank"
                   className="text-decoration-none fw-normal text-light"
                 >
-                  <i class="mx-4 fab fa-instagram-square fs-3"></i>
+                  <i className="mx-4 fab fa-instagram-square fs-3"></i>
                 </a>
                 <a
                   href="https://github.com/sabbir1054"
                   target="blank"
                   className="text-decoration-none fw-normal text-light"
                 >
-                  <i class="mx-4 fab fa-github-square fs-3"></i>
+                  <i className="mx-4 fab fa-github-square fs-3"></i>
                 </a>
                 <a
                   href="https://twitter.com/Muhamma95959532"
                   target="blank"
                   className="text-decoration-none fw-normal text-light"
                 >
-                  <i class="mx-4 fab fa-twitter fs-3"></i>
+                  <i className="mx-4 fab fa-twitter fs-3"></i>
                 </a>
               </div>
             </Col>
