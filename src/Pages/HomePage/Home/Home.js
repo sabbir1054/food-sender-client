@@ -1,12 +1,17 @@
 import React from 'react';
+import Feature from '../Feature/Feature';
+import Foods from '../Foods/Foods';
 import Hero from '../Hero/Hero';
+import MobileApp from '../MobileApp/MobileApp';
 import './Home.css'
 
 const Home = () => {
     return (
-        <div>
+      <div>
             <Hero></Hero>
-        </div>
+            <Feature></Feature>
+        <MobileApp></MobileApp>
+      </div>
     );
 };
 

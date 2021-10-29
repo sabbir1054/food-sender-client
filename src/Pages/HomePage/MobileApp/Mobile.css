@@ -1,0 +1,12 @@
+.mbl-app-bg{
+    background-color: #F2EFE6;
+}
+.mbl-right{
+background-image: url('https://i.ibb.co/f4J5TWw/app-bg.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.store-icon{
+    cursor: pointer;
+}
