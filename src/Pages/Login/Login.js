@@ -15,8 +15,8 @@ const Login = () => {
     return (
       <div className="bg-light ">
         <PageBanner text="Please Login Here"></PageBanner>
-        <div className="d-flex justify-content-center align-item-center">
-          <div className=" bg-dark text-center rounded  py-3 px-5 m-3">
+        <div className="d-flex justify-content-center align-item-center py-5">
+          <div className=" bg-dark text-center rounded  py-3 px-5 mt-5">
             <h3 className="logo text-warning display-2">Connect with us</h3>
             <p className="text-white">Food Sender</p>
                     <button className="btn fw-normal btn-light"
