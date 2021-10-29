@@ -2,8 +2,13 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
+import useAuth from "../../../Hooks/useAuth";
 import "./Header.css";
 const Header = () => {
+    const { user, logOut } = useAuth();
+    const handleLogOut = () => {
+        logOut();
+    }
   return (
     <>
       <Navbar bg="dark" expand="lg">
@@ -47,31 +52,35 @@ const Header = () => {
               >
                 Manage All Orders
               </NavLink>
-           
             </Nav>
             <div className="d-md-flex justify-content-space-evenly">
-              {/*  <h6 className="pt-2">{user.displayName}</h6>
-                {user.email ? (
-                  <NavLink to="/home">
+              <h6 className="pt-2 text-primary fw-normal">{user.displayName}</h6>
+              {user.email ? (
+                <div>
                   <NavLink
-                to="/myOrder"
-                className="text-decoration-none mx-2 text-secondary"
-              >
-                My Order
-              </NavLink>
-                    <button className="btn button mx-1" onClick={logOut}>
+                    to="/myOrder"
+                    className="text-decoration-none mx-2 text-white "
+                  >
+                    My Order
+                  </NavLink>
+                  <NavLink to="/home">
+                    <button
+                      className="btn btn-warning mx-1"
+                      onClick={handleLogOut}
+                    >
                       <i className="fas fa-sign-in-alt"></i> Log Out
                     </button>
                   </NavLink>
-                ) : ( */}
-              <div>
-                <NavLink to="/login">
-                  <button className="btn btn-warning mx-1">
-                    <i className="fas  fa-sign-in-alt"></i> Login
-                  </button>
-                </NavLink>
-              </div>
-              {/* )} */}
+                </div>
+              ) : (
+                <div>
+                  <NavLink to="/login">
+                    <button className="btn btn-warning mx-1">
+                      <i className="fas  fa-sign-in-alt"></i> Login
+                    </button>
+                  </NavLink>
+                </div>
+              )}
             </div>
           </Navbar.Collapse>
         </Container>

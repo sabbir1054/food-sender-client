@@ -1,0 +1,7 @@
+.pageBanner{
+    background-image: url('https://i.ibb.co/Wz7kBzz/pagebanner.png');
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+    height: 40vh;
+}

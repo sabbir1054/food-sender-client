@@ -1,9 +1,11 @@
 import React from 'react';
+import PageBanner from '../../PageBanner/PageBanner';
 
 const Home = () => {
     return (
         <div>
-            <h1>This is homepage</h1>
+            
+            <PageBanner text='please'></PageBanner>
         </div>
     );
 };
