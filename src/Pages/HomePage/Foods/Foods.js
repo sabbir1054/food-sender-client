@@ -9,7 +9,7 @@ const Foods = () => {
       .then((data) => setFoods(data));
   }, []);
   return (
-    <div className="bg-light py-5" id="#foods">
+    <div className="bg-light py-5" id="foods">
       <h1 className="display-4 fw-bolder text-dark text-center mb-5">
         Get Your Hot Deals
       </h1>
