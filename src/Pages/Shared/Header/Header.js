@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import useAuth from "../../../Hooks/useAuth";
@@ -11,7 +11,7 @@ const Header = () => {
     }
   return (
     <>
-      <Navbar bg="dark" expand="lg">
+      <Navbar bg="dark" expand="lg" variant="dark">
         <Container>
           <NavLink to="/" className="text-decoration-none text-dark">
             <h3 className="display-5 fw-normal logo text-warning">
@@ -20,7 +20,7 @@ const Header = () => {
           </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className=" mx-md-auto fw-bold logo">
+            <Nav className=" mx-md-auto fw-bold logo d-flex align-items-center">
               <NavLink
                 to="/home"
                 className="text-decoration-none fw-normal mx-3 text-light"
@@ -33,31 +33,42 @@ const Header = () => {
               >
                 Hot Deals
               </NavHashLink>
-
-              
-              <NavLink
-                to="/addNew"
-                className="text-decoration-none fw-normal mx-3 text-light"
-              >
-                Add New Food
-              </NavLink>
-              <NavLink
-                to="/manageOrders"
-                className="text-decoration-none fw-normal mx-3 text-light"
-              >
-                Manage All Orders
-              </NavLink>
             </Nav>
-            <div className="d-md-flex justify-content-space-evenly">
-              <h6 className="pt-2 text-primary fw-normal">{user.displayName}</h6>
+            <div className="d-md-flex justify-content-space-evenly align-items-center">
+              <h6 className="pt-2 text-primary fw-normal">
+                {user.displayName}
+              </h6>
               {user.email ? (
-                <div>
-                  <NavLink
-                    to="/myOrder"
-                    className="text-decoration-none mx-2 text-white "
+                <div className='d-flex align-items-center text-light'>
+                  <NavDropdown
+                    title="Dashboard"
+                    menuVariant="dark"
+                    className="fw-normal"
+                    id="collasible-nav-dropdown"
                   >
-                    My Order
-                  </NavLink>
+                    <NavLink
+                      to="/myOrder"
+                      className="text-decoration-none mx-2 text-white fw-normal"
+                    >
+                      My Order
+                    </NavLink>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item>
+                      <NavLink
+                        to="/addNew"
+                        className="text-decoration-none fw-normal mx-3 text-light"
+                      >
+                        Add New Food
+                      </NavLink>
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavLink
+                      to="/manageOrders"
+                      className="text-decoration-none fw-normal mx-3 text-light "
+                    >
+                      Manage All Orders
+                    </NavLink>
+                  </NavDropdown>
                   <NavLink to="/home">
                     <button
                       className="btn btn-warning mx-1"
