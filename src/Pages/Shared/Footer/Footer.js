@@ -23,7 +23,7 @@ const Footer = () => {
               <h3 className=" fw-normal logo text-light text-center">
                 Follow Us On
               </h3>
-              <div className="d-flex justify-content-center mt-5">
+              <div className="d-md-flex justify-content-center mt-5">
                 <a
                   href="https://www.facebook.com/sabbir1054"
                   className="text-decoration-none fw-normal text-light"

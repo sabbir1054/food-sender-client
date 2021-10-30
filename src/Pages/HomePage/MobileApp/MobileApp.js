@@ -19,12 +19,12 @@ const MobileApp = () => {
               <div className="d-md-flex">
                 <img
                   src="https://i.ibb.co/SX6xJJn/img-03.png"
-                  className="mx-3 my-2 rounded store-icon"
+                  className="mx-3 my-2 rounded store-icon img-fluid"
                   alt=""
                 />
                 <img
                   src="https://i.ibb.co/BzSbgr5/img-02.png"
-                  className="mx-3 my-2 rounded store-icon"
+                  className="mx-3 my-2 rounded store-icon img-fluid"
                   alt=""
                 />
               </div>

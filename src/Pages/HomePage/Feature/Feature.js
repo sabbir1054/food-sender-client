@@ -4,7 +4,7 @@ import './Feature.css'
 const Feature = () => {
   return (
     <div className="bg-dark">
-      <Row className="d-md-flex justify-content-center align-items-center">
+      <Row className="d-md-flex justify-content-center align-items-center w-100">
         <Col md="6">
           <img
             src="https://i.ibb.co/Xx6nwcx/sit-photo.jpg"

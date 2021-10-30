@@ -8,8 +8,9 @@ import './Home.css'
 const Home = () => {
     return (
       <div>
-            <Hero></Hero>
-            <Feature></Feature>
+        <Hero></Hero>
+        <Feature></Feature>
+        <Foods />
         <MobileApp></MobileApp>
       </div>
     );

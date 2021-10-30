@@ -1,16 +1,15 @@
-
-import { BrowserRouter,Switch,Route } from 'react-router-dom';
-import AuthProvider from './Context/AuthProvider';
-import AddNew from './Pages/AddNew/AddNew';
-import Home from './Pages/HomePage/Home/Home';
-import Login from './Pages/Login/Login';
-import ManagerAllOrders from './Pages/ManageOrder/ManagerAllOrders';
-import MyOrders from './Pages/MyOrder/MyOrders';
-import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
-import NotFound from './Pages/NotFound/NotFound';
-import Footer from './Pages/Shared/Footer/Footer';
-import Header from './Pages/Shared/Header/Header';
-import PrivateRoute from './PrivateRoute/PrivateRoute';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import AuthProvider from "./Context/AuthProvider";
+import AddNew from "./Pages/AddNew/AddNew";
+import Home from "./Pages/HomePage/Home/Home";
+import Login from "./Pages/Login/Login";
+import ManagerAllOrders from "./Pages/ManageOrder/ManagerAllOrders";
+import MyOrders from "./Pages/MyOrder/MyOrders";
+import NotFound from "./Pages/NotFound/NotFound";
+import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder";
+import Footer from "./Pages/Shared/Footer/Footer";
+import Header from "./Pages/Shared/Header/Header";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -28,7 +27,11 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <PrivateRoute path="/placeOrder">
+
+            <PrivateRoute path="/placeOrder/:foodId">
+              <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
+            <PrivateRoute path="/placeOrder/">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
             <PrivateRoute path="/addNew">
