@@ -14,7 +14,7 @@ const AddNew = () => {
       formState: { errors },
     } = useForm();
   const onSubmit = (data) => {
-    console.log(data)
+    
     axios.post('http://localhost:5000/foods', data)
       .then(res => {
         alert('Your Food Added');
