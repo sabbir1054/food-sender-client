@@ -31,9 +31,7 @@ function App() {
             <PrivateRoute path="/placeOrder/:foodId">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
-            <PrivateRoute path="/placeOrder/">
-              <PlaceOrder></PlaceOrder>
-            </PrivateRoute>
+            
             <PrivateRoute path="/addNew">
               <AddNew></AddNew>
             </PrivateRoute>

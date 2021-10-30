@@ -34,12 +34,7 @@ const Header = () => {
                 Hot Deals
               </NavHashLink>
 
-              <NavLink
-                to="/placeOrder"
-                className="text-decoration-none fw-normal mx-3 text-light"
-              >
-                Place Order
-              </NavLink>
+              
               <NavLink
                 to="/addNew"
                 className="text-decoration-none fw-normal mx-3 text-light"

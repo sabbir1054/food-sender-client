@@ -3,15 +3,24 @@ import { Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../Hooks/useAuth';
 import PageBanner from '../PageBanner/PageBanner';
-
+import axios from 'axios';
+import { useHistory } from 'react-router';
 const AddNew = () => {
+  const history = useHistory();
     const { user } = useAuth();
     const {
       register,
       handleSubmit,
       formState: { errors },
     } = useForm();
-    const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data)
+    axios.post('http://localhost:5000/foods', data)
+      .then(res => {
+        alert('Your Food Added');
+        history.push('/home');
+    })
+  };
     return (
       <div>
         <PageBanner text="Add Your New Food Here"></PageBanner>
@@ -46,7 +55,7 @@ const AddNew = () => {
               <input
                 type="submit"
                 value="Add Your Food"
-                className="btn btn-warning py-2 px-4 mb-3"
+                className="btn btn-warning py-2 px-4 mb-3 fw-bold"
               />
             </form>
           </div>
