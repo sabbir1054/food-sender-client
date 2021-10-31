@@ -23,45 +23,47 @@ const Footer = () => {
               <h3 className=" fw-normal logo text-light text-center">
                 Follow Us On
               </h3>
-              <div className="d-md-flex justify-content-center mt-5">
-                <a
-                  href="https://www.facebook.com/sabbir1054"
-                  className="text-decoration-none fw-normal text-light"
-                  target="blank"
-                >
-                  <i className="mx-4 fab fa-facebook fs-3"></i>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/md-sabbir-hossain-1054/"
-                  target="blank"
-                  className="text-decoration-none fw-normal text-light"
-                >
-                  <i className="mx-4 fab fa-linkedin fs-3"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/_muhammad_sabbir_hossain/"
-                  target="blank"
-                  className="text-decoration-none fw-normal text-light"
-                >
-                  <i className="mx-4 fab fa-instagram-square fs-3"></i>
-                </a>
-                <a
-                  href="https://github.com/sabbir1054"
-                  target="blank"
-                  className="text-decoration-none fw-normal text-light"
-                >
-                  <i className="mx-4 fab fa-github-square fs-3"></i>
-                </a>
-                <a
-                  href="https://twitter.com/Muhamma95959532"
-                  target="blank"
-                  className="text-decoration-none fw-normal text-light"
-                >
-                  <i className="mx-4 fab fa-twitter fs-3"></i>
-                </a>
-              </div>
+              
+              <Row className="d-flex justify-content-center align-items-center text-center">
+                <Col md="3" className='my-2'>
+                  <a
+                    href="https://www.linkedin.com/in/md-sabbir-hossain-1054/"
+                    target="blank"
+                    className="text-decoration-none fw-normal text-light"
+                  >
+                    <i className="mx-4 fab fa-linkedin fs-3"></i>
+                  </a>
+                </Col>
+                <Col md="3" className='my-2'>
+                  <a
+                    href="https://www.instagram.com/_muhammad_sabbir_hossain/"
+                    target="blank"
+                    className="text-decoration-none fw-normal text-light"
+                  >
+                    <i className="mx-4 fab fa-instagram-square fs-3"></i>
+                  </a>
+                </Col>
+                <Col md="3" className='my-2'>
+                  <a
+                    href="https://www.facebook.com/sabbir1054"
+                    className="text-decoration-none fw-normal text-light"
+                    target="blank"
+                  >
+                    <i className="mx-4 fab fa-facebook fs-3"></i>
+                  </a>
+                </Col>
+                <Col md="3" className='my-2'>
+                  <a
+                    href="https://twitter.com/Muhamma95959532"
+                    target="blank"
+                    className="text-decoration-none fw-normal text-light"
+                  >
+                    <i className="mx-4 fab fa-twitter fs-3"></i>
+                  </a>
+                </Col>
+              </Row>
             </Col>
-            <Col md="3">
+            <Col md="3" className='text-center'>
               <h3 className=" fw-normal logo text-light text-center">
                 Important Link
               </h3>
@@ -97,8 +99,10 @@ const Footer = () => {
           </Row>
         </Container>
       </div>
-      <footer className='py-2'>
-        <p className='text-center text-white'>All right reserved by Food Sender © 2021-2025</p>
+      <footer className="py-2">
+        <p className="text-center text-white">
+          All right reserved by Food Sender © 2021-2025
+        </p>
       </footer>
     </div>
   );

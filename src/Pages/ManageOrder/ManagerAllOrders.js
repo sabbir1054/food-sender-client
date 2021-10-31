@@ -44,7 +44,7 @@ const ManagerAllOrders = () => {
       <PageBanner text="Manage Your All Order Here (Admin)"></PageBanner>
       <Container>
         <div className="py-5">
-          <Table striped bordered hover responsive="md">
+          <Table striped bordered hover responsive="lg">
             <thead>
               <tr>
                 <th>Name</th>
