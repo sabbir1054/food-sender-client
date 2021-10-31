@@ -5,12 +5,26 @@ import ManageOrder from "./ManageOrder";
 
 const ManagerAllOrders = () => {
   const [orders, setOrders] = useState([]);
-
+//load orders
   useEffect(() => {
     fetch("http://localhost:5000/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
+   //delete orders & update state 
+    const handleDelete = (deleteId) => {
+         console.log(deleteId);
+       fetch(`http://localhost:5000/orders/${deleteId}`, {
+         method: "DELETE",
+       })
+         .then((res) => res.json())
+           .then((data) => {
+               alert("Are you sure to delete order")
+               const remainingOrders = orders.filter(order => order._id !== deleteId);
+               setOrders(remainingOrders);
+           
+         });
+     };
   return (
     <div>
       <PageBanner text="Manage Your All Order Here (Admin)"></PageBanner>
@@ -28,7 +42,7 @@ const ManagerAllOrders = () => {
             </thead>
             <tbody>
               {orders.map((order) => (
-                <ManageOrder order={order}></ManageOrder>
+                <ManageOrder order={order} key={order._id} delete={()=>handleDelete(order._id)}></ManageOrder>
               ))}
             </tbody>
           </Table>
