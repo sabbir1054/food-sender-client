@@ -1,15 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDzgkktb02DimxbEHTHP_399g1smTa9NDQ",
-
-  authDomain: "food-sender-muhammadsabbir.firebaseapp.com",
-
-  projectId: "food-sender-muhammadsabbir",
-
-  storageBucket: "food-sender-muhammadsabbir.appspot.com",
-
-  messagingSenderId: "577978728213",
-
-  appId: "1:577978728213:web:cc4755eb3d586bd5f0731c",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 export default firebaseConfig;
