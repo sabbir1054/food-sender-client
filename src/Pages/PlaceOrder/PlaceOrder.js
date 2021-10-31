@@ -26,7 +26,7 @@ const PlaceOrder = () => {
     
      axios.post("http://localhost:5000/orders", data)
       .then((res) => {
-      alert("Your Food Added");
+      alert("Your Order placed");
       history.push("/home");
     }); 
   };

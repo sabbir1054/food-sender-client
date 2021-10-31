@@ -5,26 +5,40 @@ import ManageOrder from "./ManageOrder";
 
 const ManagerAllOrders = () => {
   const [orders, setOrders] = useState([]);
-//load orders
+  //update order condition
+  const handleUpdate = (updateId) => {
+    fetch(`http://localhost:5000/orders/${updateId}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(orders),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
+  //load orders
   useEffect(() => {
     fetch("http://localhost:5000/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  }, []);
-   //delete orders & update state 
-    const handleDelete = (deleteId) => {
-         console.log(deleteId);
-       fetch(`http://localhost:5000/orders/${deleteId}`, {
-         method: "DELETE",
-       })
-         .then((res) => res.json())
-           .then((data) => {
-               alert("Are you sure to delete order")
-               const remainingOrders = orders.filter(order => order._id !== deleteId);
-               setOrders(remainingOrders);
-           
-         });
-     };
+  }, [handleUpdate]);
+  //delete orders & update state
+  const handleDelete = (deleteId) => {
+    console.log(deleteId);
+    fetch(`http://localhost:5000/orders/${deleteId}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert("Are you sure to delete order");
+        const remainingOrders = orders.filter(
+          (order) => order._id !== deleteId
+        );
+        setOrders(remainingOrders);
+      });
+  };
+
   return (
     <div>
       <PageBanner text="Manage Your All Order Here (Admin)"></PageBanner>
@@ -42,7 +56,12 @@ const ManagerAllOrders = () => {
             </thead>
             <tbody>
               {orders.map((order) => (
-                <ManageOrder order={order} key={order._id} delete={()=>handleDelete(order._id)}></ManageOrder>
+                <ManageOrder
+                  order={order}
+                  key={order._id}
+                  delete={() => handleDelete(order._id)}
+                  update={() => handleUpdate(order._id)}
+                ></ManageOrder>
               ))}
             </tbody>
           </Table>
