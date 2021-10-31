@@ -12,7 +12,7 @@ const PlaceOrder = () => {
   const { foodId } = useParams();
   const [food, setFood] = useState([]); 
     useEffect(() => {
-      fetch(`http://localhost:5000/placeOrder/${foodId}`)
+      fetch(`https://guarded-beyond-06490.herokuapp.com/placeOrder/${foodId}`)
         .then((res) => res.json())
         .then((data) => setFood(data));
     }, []);
@@ -24,11 +24,12 @@ const PlaceOrder = () => {
   const onSubmit = (data) => {
     data.condition = 'pending';
     
-     axios.post("http://localhost:5000/orders", data)
-      .then((res) => {
-      alert("Your Order placed");
-      history.push("/home");
-    }); 
+     axios
+       .post("https://guarded-beyond-06490.herokuapp.com/orders", data)
+       .then((res) => {
+         alert("Your Order placed");
+         history.push("/home");
+       }); 
   };
   return (
     <div>

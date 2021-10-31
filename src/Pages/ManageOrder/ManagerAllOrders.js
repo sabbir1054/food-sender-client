@@ -7,7 +7,7 @@ const ManagerAllOrders = () => {
   const [orders, setOrders] = useState([]);
   //update order condition
   const handleUpdate = (updateId) => {
-    fetch(`http://localhost:5000/orders/${updateId}`, {
+    fetch(`https://guarded-beyond-06490.herokuapp.com/orders/${updateId}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -19,14 +19,14 @@ const ManagerAllOrders = () => {
   };
   //load orders
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://guarded-beyond-06490.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [handleUpdate]);
   //delete orders & update state
   const handleDelete = (deleteId) => {
     console.log(deleteId);
-    fetch(`http://localhost:5000/orders/${deleteId}`, {
+    fetch(`https://guarded-beyond-06490.herokuapp.com/orders/${deleteId}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

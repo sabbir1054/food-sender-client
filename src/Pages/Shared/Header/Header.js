@@ -5,10 +5,10 @@ import { NavHashLink } from "react-router-hash-link";
 import useAuth from "../../../Hooks/useAuth";
 import "./Header.css";
 const Header = () => {
-    const { user, logOut } = useAuth();
-    const handleLogOut = () => {
-        logOut();
-    }
+  const { user, logOut } = useAuth();
+  const handleLogOut = () => {
+    logOut();
+  };
   return (
     <>
       <Navbar bg="dark" expand="lg" variant="dark">
@@ -39,7 +39,7 @@ const Header = () => {
                 {user.displayName}
               </h6>
               {user.email ? (
-                <div className='d-flex align-items-center text-light'>
+                <div className="d-flex align-items-center text-light">
                   <NavDropdown
                     title="Dashboard"
                     menuVariant="dark"

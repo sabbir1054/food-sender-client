@@ -15,11 +15,12 @@ const AddNew = () => {
     } = useForm();
   const onSubmit = (data) => {
     
-    axios.post('http://localhost:5000/foods', data)
-      .then(res => {
-        alert('Your Food Added');
-        history.push('/home');
-    })
+    axios
+      .post("https://guarded-beyond-06490.herokuapp.com/foods", data)
+      .then((res) => {
+        alert("Your Food Added");
+        history.push("/home");
+      });
   };
     return (
       <div>

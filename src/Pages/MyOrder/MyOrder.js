@@ -8,10 +8,11 @@ const MyOrder = (props) => {
         <td>{name}</td>
         <td>{email}</td>
         <td>{foodId}</td>
-        <td>{condition}</td>
+        <td className="fs-3 fw-bold text-primary">{condition}</td>
         <td>
-                <button className="btn btn-danger"
-                onClick={props.delete}>Cancel Order</button>
+          <button className="btn btn-danger" onClick={props.delete}>
+            Cancel Order
+          </button>
         </td>
       </tr>
     ) : (
