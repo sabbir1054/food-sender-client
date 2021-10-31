@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Hero.css";
 const Hero = () => {
   return (
@@ -13,9 +14,11 @@ const Hero = () => {
             It's the food and groceries you love, delivered.It's simple: we list
             your menu and product lists online, help you process orders.
           </p>
-          <button className="btn btn-warning fw-bold py-3 px-5 mb-5">
-            Login Here For Order Food
-          </button>
+          <NavLink to="/login">
+            <button className="btn btn-warning fw-bold py-3 px-5 mb-5">
+              Login Here For Order Food
+            </button>
+          </NavLink>
         </div>
       </div>
       <div className="col-md-6 ">
